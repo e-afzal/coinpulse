@@ -1,11 +1,10 @@
-import React from "react";
 import Image from "next/image";
 
 // LIB
 import { formatCurrency } from "@/lib/utils";
 
 // LOCAL COMPONENT
-import { CoinsOverviewFallback } from "@/components/home/fallback";
+import { CoinOverviewFallback } from "@/components/home/fallback";
 import CandlestickChart from "@/components/CandlestickChart";
 
 // ACTION
@@ -30,7 +29,7 @@ export default async function CoinsOverview() {
     ]);
   } catch (error) {
     console.error("Error fetching coin overview:", error);
-    return <CoinsOverviewFallback />;
+    return <CoinOverviewFallback />;
   }
 
   // Show UI with data, if no error
